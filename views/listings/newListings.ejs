@@ -1,0 +1,124 @@
+
+<body>
+	<% layout("layouts/boilerplate.ejs") %>
+	<!-- <h3>Create new listings:</h3> -->
+	<div id="loader">
+		<span class="blinker">नि</span>
+        <span class="blinker">रि</span>
+        <span class="blinker">क्ष</span>
+        <span class="blinker">ण</span>
+	  </div>
+	<div class="row">
+		<div class="col-8 offset-2">
+			<form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+				<div class="mb-3">
+					<label for="title" class="form-label">Name of Person: <span class="text-danger">*</span></label>
+					<input type="text" name="listing[title]" id="title" placeholder="Name of person as per adhar" class="form-control" required>
+					<div class="valid-feedback">
+						Looks good!
+					</div>
+					<div class="invalid-feedback">
+						Please provide a title.
+					</div>
+				</div>
+                <div class="mb-3">
+					<label for="title" class="form-label">Height of Person (in cm): <span class="text-danger">*</span></label>
+					<input type="text" name="listing[height]" id="title" placeholder="Height of person in feet" class="form-control" required>
+					<div class="valid-feedback">
+						Looks good!
+					</div>
+					<div class="invalid-feedback">
+						Please provide a title.
+					</div>
+				</div>
+                
+			
+				<div class="mb-3">
+					<label for="title" class="form-label">Weight: <span class="text-danger">*</span></label>
+					<input type="text" name="listing[weight]" id="title" placeholder="Weight of the missing person" class="form-control" required>
+					<div class="valid-feedback">
+						Looks good!
+					</div>
+					<div class="invalid-feedback">
+						Please provide a valid weight.
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="title" class="form-label">Occupations: <span class="text-danger">*</span></label>
+					<input type="text" name="listing[occupations]" id="title" placeholder="Occupations of missing person" class="form-control" required>
+					<div class="valid-feedback">
+						Looks good!
+					</div>
+					<div class="invalid-feedback">
+						Please provide a title.
+					</div>
+				</div>
+				
+				<div class="mb-3">
+					<label for="description" class="form-label">Physical Appearance of a person: <span class="text-danger">*</span></label>
+					<textarea name="listing[description]" id="description" cols="30" rows="10" placeholder="Write details about height weight etc" class="form-control" required></textarea>
+					<div class="valid-feedback">
+						Looks good!
+					</div>
+					<div class="invalid-feedback">
+						Please provide a description.
+					</div>
+				</div>
+		
+				<div class="mb-3">
+					<label for="price" class="form-label">Contact Information: <span class="text-danger">*</span></label>
+					<input type="text" name="listing[price]" id="price" placeholder="9158407589" class="form-control" required>
+					<div class="valid-feedback">
+						Looks good!
+					</div>
+					<div class="invalid-feedback">
+						Please provide a contact details.
+					</div>
+				</div>
+				
+				<div class="row mb-3">
+					<div class="col-md-4">
+						<label for="location" class="form-label">Last Seen Location:</label>
+						<input type="text" name="listing[location]" id="location" placeholder="Near indira mata nagar, Nagpur" class="form-control" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Please provide a location.
+						</div>
+					</div>
+					<div class="col-md-8">
+						<label for="country" class="form-label">Enter country:</label>
+						<input type="text" name="listing[country]" id="country" placeholder="India" class="form-control" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+						<div class="invalid-feedback">
+							Please provide a country.
+						</div>
+					</div>
+				</div>
+	
+				<div class="mb-3">
+					<label for="image" class="form-label">Upload Image:</label>
+					<input type="file" name="listing[image]" id="image" placeholder="https://" class="form-control">
+					<div class="valid-feedback">
+						Looks good!
+					</div>
+					<div class="invalid-feedback">
+						Please provide an image URL.
+					</div>
+				</div>
+				
+				<div class="d-flex justify-content-center">
+					<button type="submit" class="btn btn-primary mb-3 large-button">Register!</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+
+	
+	 
+
+</body>
