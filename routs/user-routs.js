@@ -16,10 +16,6 @@ router.post("/signup", wrapAsync(userControllers.signup));
 router.get("/login",(req,res)=>{
 	res.render("users/login.ejs");
 });
-router.get("/chatbot",(req,res)=>{
-	console.log("hii");
-	res.render("users/chatbot.ejs");
-})
 
 router.post("/login",
 		saveRedirect,
