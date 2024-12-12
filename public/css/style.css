@@ -612,10 +612,8 @@ h4 {
 .banner .slider .item {
    position: absolute;
    inset: 0;
-   /*transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(400px);  Increased radius */
    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(280px);
-   /* Adjusted for smaller size */
-   background:rgba(255, 255, 255, 0.2); /* Glass effect */
+   background: rgba(255, 255, 255, 0.2); /* Glass effect */
    border-radius: 15px; /* Rounded corners for the glass effect */
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
    backdrop-filter: blur(8px); /* Frosted glass blur */
@@ -637,18 +635,10 @@ h4 {
    transform: scale(1.15); /* Increase scale on hover for emphasis */
 }
 
-
-/* Slider item image styling */
-.banner .slider .item img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-}
-
 /* Content styling */
 .banner .content {
    position: relative;
-   padding-top: 350px; /* Added padding */
+   padding-top: 20rem; /* Adjusted to use rem */
    text-align: center;
    z-index: 1;
    background-color: transparent;
@@ -666,7 +656,6 @@ h4 {
 /* Main heading stroke effect */
 .banner .content h1::after {
    position: absolute;
-   
    inset: 0;
    content: attr(data-content);
    z-index: 2;
@@ -674,6 +663,74 @@ h4 {
    color: transparent;
 }
 
+/* Responsive styling */
+@media (max-width: 1200px) {
+   .banner .slider {
+       width: 80px;
+       height: 100px;
+       top: 20%;
+   }
+   .banner .content h1 {
+       font-size: 3.5em;
+   }
+}
+
+@media (max-width: 992px) {
+   .banner .slider {
+       width: 70px;
+       height: 90px;
+       top: 22%;
+   }
+   .banner .content h1 {
+       font-size: 3em;
+   }
+}
+
+@media (max-width: 768px) {
+   .banner {
+       height: auto;
+       padding: 2rem; /* Adjusted to use rem */
+   }
+   .banner .slider {
+       width: 60px;
+       height: 80px;
+       top: 25%;
+   }
+   .banner .content {
+       padding-top: 18rem; /* Adjusted to use rem */
+   }
+   .banner .content h1 {
+       font-size: 2.5em;
+   }
+}
+
+@media (max-width: 576px) {
+   .banner .slider {
+       width: 50px;
+       height: 70px;
+       top: 30%;
+   }
+   .banner .content {
+       padding-top: 15rem; /* Adjusted to use rem */
+   }
+   .banner .content h1 {
+       font-size: 2em;
+   }
+}
+
+@media (max-width: 400px) {
+   .banner .slider {
+       width: 40px;
+       height: 60px;
+       top: 35%;
+   }
+   .banner .content {
+       padding-top: 12rem; /* Adjusted to use rem */
+   }
+   .banner .content h1 {
+       font-size: 1.5em;
+   }
+}
 
 
 
